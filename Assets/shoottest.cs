@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class shoottest : MonoBehaviour
+public class Shoottest : MonoBehaviour
 {
     public GameObject bulletPrefab; // 子弹的预制体
     public Transform Player_0;     // 发射子弹的起点
@@ -45,9 +45,8 @@ public class shoottest : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            // 使用修正后的方向设置子弹速度
             rb.linearVelocity = bullet.transform.right * 10;
         }
-        bullet.AddComponent<dis>();
+        bullet.AddComponent<Dis2>();
     }
 }

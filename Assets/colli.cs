@@ -1,14 +1,13 @@
 using UnityEngine;
 
-public class colli : MonoBehaviour
+public class Colli : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        // 如果与子弹发生碰撞，则销毁陨石和子弹
-        if (collision.gameObject.CompareTag("bullet(Clone)"))
+        if (collision.gameObject.CompareTag("bullet"))
         {
-            Destroy(gameObject);           // 销毁陨石
+            Destroy(gameObject);  
         }
     }
 }

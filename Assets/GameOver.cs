@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
         Debug.Log("Player collided with: " + collision.gameObject.name);
 
         // 检查是否为特定类型的碰撞对象
-        if (collision.gameObject.CompareTag("Obstacle")) // Obstacle 为障碍物的 Tag
+        if (collision.gameObject.CompareTag("Enemy")) // Obstacle 为障碍物的 Tag
         {
             EndGame();
         }
@@ -21,7 +21,7 @@ public class GameOver : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         // 如果使用触发器检测
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             EndGame();
         }

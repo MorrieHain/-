@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // 如果需要重启游戏
+using UnityEngine.SceneManagement; 
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
